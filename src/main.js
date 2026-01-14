@@ -1,3 +1,5 @@
+import './firebase.js'
+
 const btn = document.getElementById('mobile-menu-btn');
 const menu = document.getElementById('mobile-menu');
 
@@ -34,3 +36,7 @@ function handleForm(e) {
     e.preventDefault();
     alert("Thank you! We will contact you shortly.");
 }
+
+window.openModal = openModal;
+window.closeModal = closeModal;
+window.handleForm = handleForm;
