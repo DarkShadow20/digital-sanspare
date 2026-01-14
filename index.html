@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Spare | Premium Diesel Generator Rentals in Hisar</title>
+    <meta name="description" content="Reliable DG Set rentals for industrial, commercial, and event needs. 15kVA to 500kVA generators available 24/7 in Hisar.">
+    <!--JS FILES-->
+    <script src="./src/main.js" defer></script>
+    <script type = "module" src="./src/firebase.js" defer></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="module">
+    (function(){
+          // Initialize with your Public Key
+        emailjs.init(import.meta.env.VITE_PUBLIC_KEY_EMAILJS);
+    })();
+    </script>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind Config for Custom Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            yellow: '#FFC107', // Industrial Yellow
+                            dark: '#1F2937',   // Dark Gray
+                            accent: '#F59E0B', // Darker Yellow for hover
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Custom Utilities */
+        .hero-pattern {
+            background-color: #111827;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23FFC107' fill-opacity='0.05' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50 antialiased">
+
+    <!-- NAVIGATION -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <div class="w-10 h-10 bg-brand-yellow rounded flex items-center justify-center text-brand-dark font-bold text-xl">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <span class="font-bold text-2xl tracking-tight text-gray-900">SAN SPARE</span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="text-gray-600 hover:text-brand-accent font-medium transition">Home</a>
+                    <a href="#fleet" class="text-gray-600 hover:text-brand-accent font-medium transition">DG Fleet</a>
+                    <a href="#services" class="text-gray-600 hover:text-brand-accent font-medium transition">Why Us</a>
+                    <a href="#" class="bg-brand-yellow text-brand-dark px-5 py-2.5 rounded-md font-bold hover:bg-brand-accent transition shadow-lg transform hover:-translate-y-0.5">
+                        <i class="fa-solid fa-phone mr-2"></i> Get a Quote
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-brand-dark focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-brand-accent hover:bg-gray-50">Home</a>
+                <a href="#fleet" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-brand-accent hover:bg-gray-50">Our Generators</a>
+                <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-brand-accent hover:bg-gray-50">Services</a>
+                <a href="#contact" class="block w-full text-center mt-4 bg-brand-yellow text-brand-dark px-5 py-3 rounded-md font-bold">Call Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero-pattern pt-32 pb-20 lg:pt-40 lg:pb-28 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center lg:text-left flex flex-col lg:flex-row items-center">
+            
+            <!-- Text Content -->
+            <div class="lg:w-1/2">
+                <div class="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wider text-brand-yellow uppercase bg-gray-800 rounded-full">
+                    #1 Power Rental in Hisar
+                </div>
+                <h1 class="text-4xl lg:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+                    Reliable Power.<br>
+                    <span class="text-brand-yellow">Whenever You Need It.</span>
+                </h1>
+                <p class="text-lg text-gray-300 mb-8 max-w-lg mx-auto lg:mx-0">
+                    High-performance Diesel Generators (DG Sets) on rent for industrial, commercial, and construction needs. 100% Uptime Guarantee.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="#contact" class="px-8 py-4 bg-brand-yellow text-brand-dark font-bold rounded-lg hover:bg-brand-accent transition shadow-lg text-center">
+                        Request a Call Back
+                    </a>
+                    <a href="#fleet" class="px-8 py-4 bg-transparent border-2 border-gray-600 text-white font-semibold rounded-lg hover:border-brand-yellow hover:text-brand-yellow transition text-center">
+                        View Generators
+                    </a>
+                </div>
+                
+                <!-- Trust Badges -->
+                <div class="mt-10 pt-8 border-t border-gray-800 flex flex-wrap justify-center lg:justify-start gap-8 text-sm text-gray-400 font-medium">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-check-circle text-brand-yellow"></i> 24/7 Support
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-check-circle text-brand-yellow"></i> Quick Install
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-check-circle text-brand-yellow"></i> Fuel Efficient
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Image / Graphic -->
+            <div class="lg:w-1/2 mt-12 lg:mt-0 relative">
+                <!-- Generator Image -->
+                <div class="relative rounded-xl overflow-hidden shadow-2xl border-4 border-gray-700 bg-gray-800">
+                   <!-- Placeholder Image: Replace src with your actual image URL later -->
+                   <img src="https://placehold.co/800x600/1F2937/FFC107?text=Industrial+DG+Set+Image" 
+                        alt="Industrial Generator" 
+                        class="w-full h-full object-cover transform hover:scale-105 transition duration-500">
+                   
+                   <!-- Overlay Stats -->
+                   <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-6 pt-12">
+                       <div class="flex justify-between items-end text-white">
+                            <div>
+                                <p class="text-sm text-gray-300">Current Status</p>
+                                <p class="font-bold text-green-400 flex items-center"><i class="fa-solid fa-circle text-[10px] mr-2"></i> Available for Rent</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-sm text-gray-300">Capacity Range</p>
+                                <p class="font-bold text-xl">15kVA - 500kVA</p>
+                            </div>
+                       </div>
+                   </div>
+                </div>
+                <!-- Decorative blob -->
+                <div class="absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-yellow opacity-20 blur-3xl rounded-full"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FLEET SECTION -->
+    <section id="fleet" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-base text-brand-accent font-semibold tracking-wide uppercase">Our Fleet</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Choose Your Power Capacity
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+                    From small offices to heavy industrial sites, we have the right DG set for you.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Card 1 -->
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition duration-300 group">
+                    <div class="bg-gray-100 h-48 relative overflow-hidden">
+                        <!-- Placeholder Image -->
+                        <img src="https://placehold.co/600x400/e5e7eb/1f2937?text=Small+Generator" 
+                             alt="Small Generator" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900">15 kVA - 30 kVA</h3>
+                                <p class="text-gray-500 text-sm mt-1">Small Office / Retail</p>
+                            </div>
+                            <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">Silent</span>
+                        </div>
+                        <ul class="mt-4 space-y-2 text-gray-600 text-sm">
+                            <li><i class="fa-solid fa-check text-brand-yellow mr-2"></i>Compact Design</li>
+                            <li><i class="fa-solid fa-check text-brand-yellow mr-2"></i>Low Fuel Consumption</li>
+                        </ul>
+                        <button onclick="openModal('15-30 kVA')" class="mt-6 w-full block text-center bg-gray-900 text-white py-3 rounded font-semibold hover:bg-brand-yellow hover:text-gray-900 transition">Rent Now</button>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition duration-300 transform md:-translate-y-4 group">
+                    <div class="bg-gray-800 text-brand-yellow text-xs font-bold text-center py-1 absolute top-0 w-full z-10">MOST POPULAR</div>
+                    <div class="bg-gray-100 h-48 relative overflow-hidden mt-6">
+                         <!-- Placeholder Image -->
+                        <img src="https://placehold.co/600x400/1f2937/FFC107?text=Industrial+Generator" 
+                             alt="Industrial Generator" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900">62 kVA - 125 kVA</h3>
+                                <p class="text-gray-500 text-sm mt-1">Construction / Industrial</p>
+                            </div>
+                            <span class="bg-brand-yellow text-gray-900 text-xs font-bold px-2 py-1 rounded">Heavy Duty</span>
+                        </div>
+                        <ul class="mt-4 space-y-2 text-gray-600 text-sm">
+                            <li><i class="fa-solid fa-check text-brand-yellow mr-2"></i>High Load Capacity</li>
+                            <li><i class="fa-solid fa-check text-brand-yellow mr-2"></i>AMC Support Included</li>
+                        </ul>
+                        <button onclick="openModal('62-125 kVA')" class="mt-6 w-full block text-center bg-brand-yellow text-brand-dark py-3 rounded font-semibold hover:bg-brand-accent transition">Rent Now</button>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition duration-300 group">
+                    <div class="bg-gray-100 h-48 relative overflow-hidden">
+                         <!-- Placeholder Image -->
+                        <img src="https://placehold.co/600x400/e5e7eb/1f2937?text=Heavy+Generator" 
+                             alt="Heavy Generator" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900">200 kVA+</h3>
+                                <p class="text-gray-500 text-sm mt-1">Hospitals / Large Events</p>
+                            </div>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">Sync</span>
+                        </div>
+                        <ul class="mt-4 space-y-2 text-gray-600 text-sm">
+                            <li><i class="fa-solid fa-check text-brand-yellow mr-2"></i>Multi-set Synchronization</li>
+                            <li><i class="fa-solid fa-check text-brand-yellow mr-2"></i>On-site Operator</li>
+                        </ul>
+                        <button onclick="openModal('200 kVA+')" class="mt-6 w-full block text-center bg-gray-900 text-white py-3 rounded font-semibold hover:bg-brand-yellow hover:text-gray-900 transition">Rent Now</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US (TRUST SIGNALS) -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center mb-12">
+                <h2 class="text-base text-brand-accent font-semibold tracking-wide uppercase">Why San Spare</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    More Than Just A Machine
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Feature 1 -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="flex items-center justify-center h-16 w-16 rounded-full bg-brand-yellow text-brand-dark mb-5 text-2xl shadow-lg">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <h3 class="text-lg leading-6 font-bold text-gray-900">24/7 On-Call Support</h3>
+                    <p class="mt-2 text-base text-gray-500">
+                        Power failure doesn't check the clock. Neither do we. Our technicians are ready around the clock.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="flex items-center justify-center h-16 w-16 rounded-full bg-brand-yellow text-brand-dark mb-5 text-2xl shadow-lg">
+                        <i class="fa-solid fa-wrench"></i>
+                    </div>
+                    <h3 class="text-lg leading-6 font-bold text-gray-900">Proactive Maintenance</h3>
+                    <p class="mt-2 text-base text-gray-500">
+                        We handle all service and maintenance. You just focus on your business, we ensure the uptime.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="flex items-center justify-center h-16 w-16 rounded-full bg-brand-yellow text-brand-dark mb-5 text-2xl shadow-lg">
+                        <i class="fa-solid fa-hand-holding-dollar"></i>
+                    </div>
+                    <h3 class="text-lg leading-6 font-bold text-gray-900">Transparent Pricing</h3>
+                    <p class="mt-2 text-base text-gray-500">
+                        No hidden costs. Flexible daily, weekly, or monthly rental plans tailored to your budget.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLIENTS / SOCIAL PROOF STRIP -->
+    <section class="bg-gray-900 py-10">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-gray-400 font-medium uppercase tracking-widest text-sm mb-6">Trusted By</p>
+            <div class="flex flex-wrap justify-center gap-8 md:gap-16 opacity-70 grayscale">
+                <!-- Simple Text Logos for Placeholder -->
+                <span class="text-xl font-bold text-white">Govt Contractors</span>
+                <span class="text-xl font-bold text-white">Local Hospitals</span>
+                <span class="text-xl font-bold text-white">Event Planners</span>
+                <span class="text-xl font-bold text-white">Industrial Units</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-20 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-brand-yellow rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row">
+                
+                <!-- Contact Info -->
+                <div class="md:w-2/5 bg-gray-900 p-10 text-white flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-6">Get a Free Quote</h3>
+                        <p class="text-gray-400 mb-8">Tell us your power requirements and we will suggest the perfect DG set for you.</p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <i class="fa-solid fa-phone mt-1 text-brand-yellow"></i>
+                                <div class="ml-4">
+                                    <p class="text-sm text-gray-400">Call Us</p>
+                                    <p class="text-lg font-bold">+91 98120-00051</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fa-solid fa-envelope mt-1 text-brand-yellow"></i>
+                                <div class="ml-4">
+                                    <p class="text-sm text-gray-400">Email</p>
+                                    <p class="text-lg font-bold">sanspare2@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fa-solid fa-location-dot mt-1 text-brand-yellow"></i>
+                                <div class="ml-4">
+                                    <p class="text-sm text-gray-400">Location</p>
+                                    <p class="text-lg font-bold">Industrial Area, Hisar, Haryana</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-12">
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-yellow hover:text-gray-900 transition"><i class="fa-brands fa-whatsapp"></i></a>
+                            <a href="https://ig.me/m/san_spare" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-yellow hover:text-gray-900 transition"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="md:w-3/5 p-10 bg-white relative">
+                    <form id="quote-form" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                                <input type="text" id="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-yellow focus:border-brand-yellow outline-none transition" placeholder="Your Name">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+                                <input type="tel" id="phone" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-yellow focus:border-brand-yellow outline-none transition" placeholder="Phone Number">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Requirement (kVA)</label>
+                            <select id="requirement" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-yellow focus:border-brand-yellow outline-none transition">
+                                <option>I'm not sure</option>
+                                <option>15 - 30 kVA (Small)</option>
+                                <option>62 - 125 kVA (Medium)</option>
+                                <option>200 kVA+ (Large)</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-yellow focus:border-brand-yellow outline-none transition" placeholder="Project details or duration..."></textarea>
+                        </div>
+
+                        <button type="submit" id="submit-btn" class="w-full bg-gray-900 text-white font-bold py-3 rounded-lg hover:bg-brand-accent transition flex justify-center items-center">
+                            <span>Send Request</span>
+                            <i id="loading-spinner" class="fas fa-circle-notch fa-spin ml-2 hidden"></i>
+                        </button>
+                    </form>
+
+                    <!-- Success Toast -->
+                    <div id="toast" class="hidden absolute top-4 right-4 left-4 bg-green-50 border-l-4 border-green-500 p-4 rounded shadow-lg">
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <i class="fa-solid fa-check-circle text-green-500"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm font-bold text-green-800">Request Sent!</p>
+                                <p class="text-sm text-green-700 mt-1">We will contact you shortly.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-800 text-gray-400 py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p>&copy; 2026 San Spare. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- MODAL -->
+    <div id="quote-modal" class="fixed inset-0 bg-gray-900 bg-opacity-75 hidden items-center justify-center z-50 px-4">
+        <div class="bg-white rounded-lg p-8 max-w-sm w-full text-center relative">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-900"><i class="fa-solid fa-times text-xl"></i></button>
+            <div class="w-16 h-16 bg-brand-yellow rounded-full flex items-center justify-center mx-auto mb-4 text-brand-dark text-2xl">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Interested in <span id="modal-interest"></span>?</h3>
+            <p class="text-gray-500 mb-6">Call us directly for the best rates.</p>
+            <a href="tel:+919812000051" class="block w-full bg-brand-yellow text-brand-dark font-bold py-3 rounded-lg mb-3 hover:bg-brand-accent">
+                <i class="fa-solid fa-phone mr-2"></i> Call Now
+            </a>
+            <button onclick="closeModal()" class="text-sm text-gray-500 hover:text-gray-900 underline">Close</button>
+        </div>
+    </div>
+
+    
+</body>
+</html>
