@@ -61,33 +61,60 @@
 <body class="font-sans text-gray-800 bg-gray-50 antialiased">
 
     <!-- NAVIGATION -->
-    <nav class="bg-white shadow-md fixed w-full z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20 items-center">
+    <nav class="fixed w-full z-50 flex flex-col shadow-md font-sans">
+
+        <div class="bg-gray-900 text-white text-[10px] sm:text-xs font-semibold tracking-wider py-2">
+            <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+                
+                <!-- Left Side: USPs (Hidden on very small screens to fit phone number) -->
+                <div class="hidden md:flex items-center">
+                    <span>Immediate Availability</span>
+                    <span class="mx-2 text-brand-yellow">|</span>
+                    <span>Pan-India Supply & Rentals</span>
+                    <span class="mx-2 text-brand-yellow">|</span>
+                    <span>39+ Years of Power Solutions Expertise</span>
+                </div>
+
+                <!-- Mobile USP (Simplified) -->
+                <div class="md:hidden flex items-center">
+                    <span>39+ Years Exp.</span>
+                </div>
+
+                <!-- Right Side: Contact Number -->
+                <div class="flex items-center">
+                    <i class="fa-solid fa-phone text-brand-yellow mr-2"></i>
+                    <a href="tel:+917251863085" class="hover:text-brand-yellow transition">+91 72518-63085</a>
+                </div>
+            </div>
+        </div>
+        <div class="bg-white w-full">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between h-20 items-center">
                 
                 <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
-                    <div class="w-10 h-10 bg-brand-yellow rounded flex items-center justify-center text-brand-dark font-bold text-xl">
-                    <img src="/src/image/Logo.png" alt="San Spare Logo" class="h-10 w-auto">
+                    <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                        <div class="w-10 h-10 bg-brand-yellow rounded flex items-center justify-center text-brand-dark font-bold text-xl">
+                            <img src="/src/image/Logo.png" alt="San Spare Logo" class="h-10 w-auto">
+                        </div>
+                        <span class="font-bold text-2xl tracking-tight text-gray-900">SAN SPARE</span>
                     </div>
-                    <span class="font-bold text-2xl tracking-tight text-gray-900">SAN SPARE</span>
-                </div>
 
                 <!-- Desktop Menu -->
-                <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#home" class="text-gray-600 hover:text-brand-accent font-medium transition">Home</a>
-                    <a href="#fleet" class="text-gray-600 hover:text-brand-accent font-medium transition">DG Fleet</a>
-                    <a href="#services" class="text-gray-600 hover:text-brand-accent font-medium transition">Why Us</a>
-                    <a href="#contact" class="bg-brand-yellow text-brand-dark px-5 py-2.5 rounded-md font-bold hover:bg-brand-accent transition shadow-lg transform hover:-translate-y-0.5">
-                        <i class="fa-solid fa-phone mr-2"></i> Get a Quote
-                    </a>
-                </div>
+                    <div class="hidden md:flex space-x-8 items-center">
+                        <a href="#home" class="text-gray-600 hover:text-brand-accent font-medium transition">Home</a>
+                        <a href="#fleet" class="text-gray-600 hover:text-brand-accent font-medium transition">DG Fleet</a>
+                        <a href="#services" class="text-gray-600 hover:text-brand-accent font-medium transition">Why Us</a>
+                        <a href="#contact" class="bg-brand-yellow text-brand-dark px-5 py-2.5 rounded-md font-bold hover:bg-brand-accent transition shadow-lg transform hover:-translate-y-0.5">
+                            <i class="fa-solid fa-phone mr-2"></i> Get a Quote
+                        </a>
+                    </div>
 
                 <!-- Mobile Menu Button -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-brand-dark focus:outline-none">
-                        <i class="fa-solid fa-bars text-2xl"></i>
-                    </button>
+                    <div class="md:hidden flex items-center">
+                        <button id="mobile-menu-btn" class="text-gray-600 hover:text-brand-dark focus:outline-none">
+                            <i class="fa-solid fa-bars text-2xl"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -112,12 +139,16 @@
                 <div class="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wider text-brand-yellow uppercase bg-gray-800 rounded-full">
                     #1 Power Rental in Haryana
                 </div>
-                <h1 class="text-4xl lg:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+                <h1 class="text-5xl lg:text-5xl font-extrabold tracking-tight mb-6 leading-tight">
                     Reliable Power.<br>
                     <span class="text-brand-yellow">Whenever You Need It.</span>
                 </h1>
                 <p class="text-lg text-gray-300 mb-8 max-w-lg mx-auto lg:mx-0">
-                    High-performance Diesel Generators (DG Sets) on rent for industrial, commercial, and construction needs. 100% Uptime Guarantee.
+                With 39+ years of industry expertise, San Spare provides reliable industrial and commercial DG set rentals across India.
+                </p>
+                <p class="text-lg text-gray-300 mb-8 max-w-lg mx-auto lg:mx-0">
+                We specialize in short- and long-term generator rentals for manufacturing units, infrastructure projects, commercial facilities, and emergency 
+                power needs—backed by a ready fleet, fast dispatch, and professional installation nationwide.                
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                     <a href="#contact" class="px-8 py-4 bg-brand-yellow text-brand-dark font-bold rounded-lg hover:bg-brand-accent transition shadow-lg text-center">
