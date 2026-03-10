@@ -38,7 +38,7 @@ form.addEventListener('submit', async (e) => {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(formData)
         });
-        
+
         await emailjs.send(import.meta.env.VITE_SERVICE_KEY_EMAILJS, import.meta.env.VITE_TEMPLATE_ID_EMAILJS, emailParams);
         // Success UI
         if(response.ok){
