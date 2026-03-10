@@ -33,8 +33,7 @@ form.addEventListener('submit', async (e) => {
         message: message
     };
     try {
-
-        const response = await fetch('http://localhost:3000/api/quote', {
+        const response = await fetch(`${import.meta.env.VITE_BACKEND_POINTER}`+'/api/quote', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(formData)
